@@ -12,7 +12,7 @@ I strive to take any project I work on to new heights, striving to create the mo
   contact: {
     phone: "+7 (993) 324-14-55",
     email: "adhqulm@gmail.com",
-    location: "Tbilisi, Georgia",
+    location: "Moscow, Russia",
   },
   social: {
       github: "https://github.com/adhqulm",
