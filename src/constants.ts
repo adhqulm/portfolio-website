@@ -58,7 +58,7 @@ export const PROJECTS_DATA: Project[] = [
         description: "A simple personal portfolio website built to showcase projects and skills.",
         tags: ["TypeScript", "JavaScript", "CSS", "JSON", "Markdown"],
         imageUrl: "/portfolio.png",
-        liveUrl: "http://localhost:3000/",
+        liveUrl: "https://kristinaganina.com/",
     },
     {
         title: "Graphing Calculator",
