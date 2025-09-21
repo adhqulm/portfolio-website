@@ -6,7 +6,8 @@ export const PROFILE_DATA: Profile = {
   summary: "A versatile and innovative fullstack developer with a passion for continuous learning. I specialize in building scalable, high-quality solutions using a diverse tech stack that includes React, TypeScript, and .NET, while also leveraging unique expertise in IBM mainframe technologies.",
   summary2: `
 My name is Kristina and I am described as a determined, self-motivated, and ambitious developer by my peers.
-I have several hobbies that keep me busy while I'm not programming, these include: making music and playing video games. I'm always looking for new passions and hobbies to explore and learn about. I completed my education in Abu Dhabi and attended university where I specialized in Engineering and Physics, then promptly moved back to Russia in 2024,
+I have several hobbies that keep me busy while I'm not programming, these include: making music and playing video games. 
+I'm always looking for new passions and hobbies to explore and learn about. I completed my education in Abu Dhabi and attended university where I specialized in Engineering and Physics, then promptly moved back to Russia in 2024.
 A great piece of software is never finished, it is only improved upon continually. Coding is an art form and a science all at once.
 I strive to take any project I work on to new heights, striving to create the most useful and well executed solutions I can.`,
   contact: {
@@ -67,6 +68,14 @@ export const PROJECTS_DATA: Project[] = [
         imageUrl: "/calculator.png",
         liveUrl: "https://github.com/adhqulm/Calculator",
     },
+    {
+        title: "py2js-mini",
+        description: "A tiny Python → JavaScript transpiler. Parse Python, lower it, emit JS, and run with a mini runtime.",
+        tags: ["Python", "JavaScript"],
+        imageUrl: "/transpiler.png",
+        liveUrl: "https://github.com/adhqulm/py2js-mini",
+    },
+
 
 ];
 
