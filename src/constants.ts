@@ -81,7 +81,7 @@ export const PROJECTS_DATA: Project[] = [
 
 export const TECHNOLOGIES: string[] = [
   ".NET", "React", "Next.js", "TypeScript", "JavaScript", "ASP.Net Core", "Rest APIs", "Azure", "COBOL", 
-  "SQL Server", "JCL", "SQL", "Python", "HTML/CSS", "Tailwind CSS", "CSS/HTML", "Git", "Docker"
+  "SQL Server", "JCL", "SQL", "Python", "HTML/CSS", "Tailwind CSS", "Git", "Docker"
 ];
 
 export const CORE_SKILLS: string[] = [
