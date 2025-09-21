@@ -71,7 +71,7 @@ export const PROJECTS_DATA: Project[] = [
     {
         title: "py2js-mini",
         description: "A tiny Python → JavaScript transpiler. Parse Python, lower it, emit JS, and run with a mini runtime.",
-        tags: ["Python", "JavaScript"],
+        tags: ["Python", "JavaScript", "Transpiler", "Powershell"],
         imageUrl: "/transpiler.png",
         liveUrl: "https://github.com/adhqulm/py2js-mini",
     },
