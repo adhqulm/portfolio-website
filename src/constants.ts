@@ -11,9 +11,9 @@ I'm always looking for new passions and hobbies to explore and learn about. I co
 A great piece of software is never finished, it is only improved upon continually. Coding is an art form and a science all at once.
 I strive to take any project I work on to new heights, striving to create the most useful and well executed solutions I can.`,
   contact: {
-    phone: "+7 (993) 324-14-55",
+    phone: "+995 555 540 926",
     email: "adhqulm@gmail.com",
-    location: "Moscow, Russia",
+    location: "Tbilisi, Georgia",
   },
   social: {
       github: "https://github.com/adhqulm",
@@ -90,4 +90,4 @@ export const CORE_SKILLS: string[] = [
   "Test Driven Development"
 ];
 
-export const LANGUAGES: string[] = ["Russian: Native", "English: Native"];
+export const LANGUAGES: string[] = ["English: Native", "Russian: Native"];
