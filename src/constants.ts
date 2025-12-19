@@ -75,19 +75,38 @@ export const PROJECTS_DATA: Project[] = [
         imageUrl: "/transpiler.png",
         liveUrl: "https://github.com/adhqulm/py2js-mini",
     },
-
+    {
+        title: "File Type Converter",
+        description: "A telegram bot that converts files between most major formats like images, documents, audio, video, and PDFs.",
+        tags: ["Telegram", "Bot", "Python"],
+        imageUrl: "/bot.png",
+        liveUrl: "https://t.me/filetypeconverter_bot",
+    },
 
 ];
 
-export const TECHNOLOGIES: string[] = [
-  ".NET", "React", "Next.js", "TypeScript", "JavaScript", "ASP.Net Core", "Rest APIs", "Azure", "COBOL", 
-  "SQL Server", "JCL", "SQL", "Python", "HTML/CSS", "Tailwind CSS", "Git", "Docker"
+export const PROGRAMMINGLANGUAGES: string[] = [
+  "C#", "JavaScript", "TypeScript", "Python", "SQL"
+];
+
+export const FRAMEWORKS: string[] = [
+  ".NET", "React", "Next.js", "ASP.NET Core", "Tailwind CSS"
+];
+
+export const DATABASES: string[] = [
+  "SQL Server"
+];
+
+export const CLOUD: string[] = [
+  "Azure", "Docker", "Git", "CI/CD"
+];
+
+export const API: string[] = [
+  "CSS/HTML", "REST APIs"
 ];
 
 export const CORE_SKILLS: string[] = [
-  "Agile Methodologies", "CI/CD",
-  "Excellent collaboration skills", "Database design & Query optimization",
-  "Test Driven Development"
+  "Agile Methodologies", "Excellent collaboration skills", "Database design & Query optimization", "Test Driven Development"
 ];
 
 export const LANGUAGES: string[] = ["English: Native", "Russian: Native"];
