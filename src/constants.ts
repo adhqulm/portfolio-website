@@ -47,6 +47,14 @@ export const EXPERIENCE_DATA: Experience[] = [
 ];
 
 export const PROJECTS_DATA: Project[] = [
+
+    {
+        title: "Foodgram",
+        description: "The purpose of this website is to allow users to create and store recipes on an online platform. In addition, users can download a list of ingredients needed to prepare a dish, view their friends’ recipes, and add favorite recipes to a favorites list.",
+        tags: ["Python", "Django", "Django Rest Framework", "Djoser", "Authentication & Authorization", "JavaScript", "HTML", "CSS", "PostegreSQL", "Docker"],
+        imageUrl: "/foodgram.png",
+        liveUrl: "https://foodgram.bar/",
+    },
     {
         title: "Virtual Proposals",
         description: "A modern, and cute website for proposing to your loved ones digitally, making use of SSR for secure encryption / decryption of request tokens and PDF generation.",
@@ -56,7 +64,7 @@ export const PROJECTS_DATA: Project[] = [
     },
     {
         title: "Portfolio Website :)",
-        description: "A simple personal portfolio website built to showcase projects and skills.",
+        description: "Simple personal portfolio website built to showcase projects and skills.",
         tags: ["TypeScript", "JavaScript", "CSS", "JSON", "Markdown"],
         imageUrl: "/portfolio.png",
         liveUrl: "https://kristinaganina.com/",
@@ -70,14 +78,14 @@ export const PROJECTS_DATA: Project[] = [
     },
     {
         title: "py2js-mini",
-        description: "A tiny Python → JavaScript transpiler. Parse Python, lower it, emit JS, and run with a mini runtime.",
+        description: "Tiny Python → JavaScript transpiler. Parse Python, lower it, emit JS, and run with a mini runtime.",
         tags: ["Python", "JavaScript", "Transpiler", "Powershell"],
         imageUrl: "/transpiler.png",
         liveUrl: "https://github.com/adhqulm/py2js-mini",
     },
     {
         title: "File Type Converter",
-        description: "A telegram bot that converts files between most major formats like images, documents, audio, video, and PDFs.",
+        description: "Telegram bot that converts files between most major formats like images, documents, audio, video, and PDFs.",
         tags: ["Telegram", "Bot", "Python"],
         imageUrl: "/bot.png",
         liveUrl: "https://t.me/filetypeconverter_bot",
