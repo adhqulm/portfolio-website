@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { PROFILE_DATA } from '../constants';
 import { PhoneIcon, MailIcon, LocationIcon, GithubIcon} from './icons';
+import { useTranslation } from '../context/LanguageContext';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -18,8 +19,8 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
       duration: 0.5,
@@ -29,34 +30,35 @@ const itemVariants = {
 };
 
 const Hero = () => {
-  const { name, title, contact, social } = PROFILE_DATA;
+  const { contact, social } = PROFILE_DATA;
+  const t = useTranslation();
 
   return (
-    <motion.section 
+    <motion.section
         id="home"
         className="min-h-screen flex flex-col justify-center text-center -mt-[64px]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
     >
-      <motion.h1 
+      <motion.h1
         className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-gray-100"
         // @ts-ignore
         variants={itemVariants}
       >
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
-            {name}
+            {t.name}
         </span>
       </motion.h1>
-      <motion.h2 
+      <motion.h2
         className="mt-4 text-xl md:text-2xl font-semibold text-cyan-300 tracking-wider"
         // @ts-ignore
         variants={itemVariants}
       >
-        {title}
+        {t.profile.title}
       </motion.h2>
-      
-      <motion.div 
+
+      <motion.div
         className="mt-8 flex justify-center items-center space-x-4 md:space-x-6 text-gray-400"
         // @ts-ignore
         variants={itemVariants}
@@ -67,7 +69,7 @@ const Hero = () => {
         </div>
         <div className="flex items-center space-x-2">
             <LocationIcon className="w-5 h-5" />
-            <span className="text-sm">{contact.location}</span>
+            <span className="text-sm">{t.profile.location}</span>
         </div>
       </motion.div>
       <motion.div
@@ -99,7 +101,7 @@ const Hero = () => {
           download
           className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-semibold rounded-lg transition-colors duration-300 text-sm"
         >
-          Download CV
+          {t.hero.downloadCv}
         </a>
       </motion.div>
     </motion.section>

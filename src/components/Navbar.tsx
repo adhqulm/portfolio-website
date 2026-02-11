@@ -1,23 +1,25 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-// Fix: Import Variants from framer-motion to explicitly type animation variants.
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { MenuIcon, XIcon } from './icons';
-
-const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
-];
+import { useLanguage, useTranslation } from '../context/LanguageContext';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('#home');
+    const { language, toggleLanguage } = useLanguage();
+    const t = useTranslation();
+
+    const navLinks = [
+        { name: t.nav.home, href: '#home' },
+        { name: t.nav.about, href: '#about' },
+        { name: t.nav.experience, href: '#experience' },
+        { name: t.nav.education, href: '#education' },
+        { name: t.nav.projects, href: '#projects' },
+        { name: t.nav.skills, href: '#skills' },
+        { name: t.nav.contact, href: '#contact' },
+    ];
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -33,8 +35,9 @@ const Navbar = () => {
     };
 
     useEffect(() => {
+        const sectionIds = ['#home', '#about', '#experience', '#education', '#projects', '#skills', '#contact'];
         const handleScroll = () => {
-            const sections = navLinks.map(link => document.querySelector(link.href));
+            const sections = sectionIds.map(id => document.querySelector(id));
             const scrollY = window.scrollY;
 
             let currentSection = '#home';
@@ -46,7 +49,7 @@ const Navbar = () => {
                     }
                 }
             }
-            
+
             if ((window.innerHeight + Math.ceil(window.scrollY)) >= document.body.offsetHeight - 80) {
                  currentSection = '#contact';
             }
@@ -57,7 +60,7 @@ const Navbar = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
+        handleScroll();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -75,7 +78,7 @@ const Navbar = () => {
         visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeInOut' } },
         exit: { opacity: 0, x: '100%', transition: { duration: 0.3, ease: 'easeInOut' } }
     };
-    
+
     const listItemVariants = {
         hidden: { opacity: 0, y: -10 },
         visible: { opacity: 1, y: 0 }
@@ -83,29 +86,51 @@ const Navbar = () => {
 
     return (
         <>
-            <motion.nav 
+            <motion.nav
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
                 className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800"
             >
                 <div className="container mx-auto px-6 md:px-10 lg:px-20 max-w-5xl h-16 flex justify-between items-center">
-                    <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="text-xl font-bold text-white font-serif">Kristina Ganina</a>
-                    
+                    <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="text-xl font-bold text-white font-serif">{t.name}</a>
+
                     <div className="hidden md:flex items-center space-x-6">
                         {navLinks.map(link => (
-                            <a 
-                                key={link.name} 
-                                href={link.href} 
+                            <a
+                                key={link.href}
+                                href={link.href}
                                 onClick={(e) => handleLinkClick(e, link.href)}
                                 className={`text-sm font-medium transition-colors duration-300 ${activeSection === link.href ? 'text-cyan-400' : 'text-gray-400 hover:text-cyan-400'}`}
                             >
                                 {link.name}
                             </a>
                         ))}
+                        <button
+                            onClick={toggleLanguage}
+                            className="flex items-center space-x-1.5 text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors duration-300 ml-2"
+                        >
+                            <img
+                                src={language === "en" ? "/flags/russia.png" : "/flags/UK.png"}
+                                alt={language === "en" ? "RU" : "EN"}
+                                className="w-5 h-4 rounded-sm object-cover"
+                            />
+                            <span>{language === "en" ? "RU" : "EN"}</span>
+                        </button>
                     </div>
 
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center space-x-3">
+                        <button
+                            onClick={toggleLanguage}
+                            className="flex items-center space-x-1 text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        >
+                            <img
+                                src={language === "en" ? "/flags/russia.png" : "/flags/UK.png"}
+                                alt={language === "en" ? "RU" : "EN"}
+                                className="w-5 h-4 rounded-sm object-cover"
+                            />
+                            <span>{language === "en" ? "RU" : "EN"}</span>
+                        </button>
                         <button onClick={toggleMenu} aria-label="Toggle menu">
                             <MenuIcon className="w-6 h-6 text-white" />
                         </button>
@@ -128,16 +153,16 @@ const Navbar = () => {
                                 <XIcon className="w-6 h-6 text-white" />
                             </button>
                         </div>
-                        <motion.div 
+                        <motion.div
                             className="flex flex-col items-center justify-center h-full space-y-8 -mt-16"
                             variants={menuVariants}
                             initial="hidden"
                             animate="visible"
                         >
                             {navLinks.map(link => (
-                                <motion.a 
-                                    key={link.name} 
-                                    href={link.href} 
+                                <motion.a
+                                    key={link.href}
+                                    href={link.href}
                                     onClick={(e) => handleLinkClick(e, link.href)}
                                     variants={listItemVariants}
                                     className={`text-2xl font-semibold ${activeSection === link.href ? 'text-cyan-400' : 'text-gray-300 hover:text-cyan-400'}`}

@@ -7,7 +7,7 @@ export const PROFILE_DATA: Profile = {
   summary2: `
 My name is Kristina and I am described as a determined, self-motivated, and ambitious developer by my peers.
 I have several hobbies that keep me busy while I'm not programming, these include: making music and playing video games. 
-I'm always looking for new passions and hobbies to explore and learn about. I completed my education in Abu Dhabi and attended university where I specialized in Engineering and Physics, then promptly moved back to Russia in 2024.
+I'm always looking for new passions and hobbies to explore and learn about. I am currently completing my education in an American University where I specialize in Computer Science.
 A great piece of software is never finished, it is only improved upon continually. Coding is an art form and a science all at once.
 I strive to take any project I work on to new heights, striving to create the most useful and well executed solutions I can.`,
   contact: {
