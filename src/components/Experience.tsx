@@ -71,7 +71,7 @@ const Experience = () => {
                  <div className="w-full md:w-1/2 md:pl-8">
                       <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-lg border border-gray-700/50 overflow-hidden">
                           {job.imageUrl && (
-                              <img src={job.imageUrl} alt={job.company} className="w-full h-24 object-cover opacity-80" />
+                              <img src={job.imageUrl} alt={job.company} className={`w-full object-cover opacity-80 ${job.imageUrl.includes('kobuleti') ? 'h-20' : 'h-24'}`} />
                           )}
                           <div className="p-6">
                           <div className={index === 0 ? "md:hidden mb-2" : "mb-2"}>

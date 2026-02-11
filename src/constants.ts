@@ -36,10 +36,23 @@ export const EXPERIENCE_DATA: Experience[] = [
     ],
   },
   {
+    role: "Software Engineer, Full Stack Developer",
+    company: "Kobuleti Geo, Kobuleti, Georgia",
+    period: "Jan 2025 - Jul 2025",
+    companyUrl: "https://kobuletigeo.com/",
+    imageUrl: "/experience/kobuleti.png",
+    description: [
+      "Developed and maintained web applications serving municipal operations and public-facing services.",
+      "Collaborated with stakeholders to gather requirements and deliver tailored software solutions.",
+      "Implemented new features and resolved issues across the full stack.",
+      "Supported deployment pipelines and contributed to code reviews in an agile workflow.",
+    ],
+  },
+  {
     role: "Software Engineer, Full Stack Developer (Remote)",
     company: "USABridge, Watertown, MA, USA",
-    period: "Jul 2024 - Jun 2025",
-    companyUrl: "https://usabridge.ru/",
+    period: "Jul 2024 - Jan 2025",
+    companyUrl: "https://usabridge.net/",
     imageUrl: "/experience/bridge.png",
     description: [
       "Built and supported client-facing web applications using modern frontend and backend technologies.",

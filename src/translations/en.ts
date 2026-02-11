@@ -41,9 +41,20 @@ I strive to take any project I work on to new heights, striving to create the mo
         ],
       },
       {
+        role: "Software Engineer, Full Stack Developer",
+        company: "Kobuleti City Hall, Kobuleti, Georgia",
+        period: "Jan 2025 - Jul 2025",
+        description: [
+          "Developed and maintained web applications serving municipal operations and public-facing services.",
+          "Collaborated with stakeholders to gather requirements and deliver tailored software solutions.",
+          "Implemented new features and resolved issues across the full stack.",
+          "Supported deployment pipelines and contributed to code reviews in an agile workflow.",
+        ],
+      },
+      {
         role: "Software Engineer, Full Stack Developer (Remote)",
         company: "USABridge, Watertown, MA, USA",
-        period: "Jul 2024 - Jun 2025",
+        period: "Jul 2024 - Jan 2025",
         description: [
           "Built and supported client-facing web applications using modern frontend and backend technologies.",
           "Integrated third-party services and APIs.",
