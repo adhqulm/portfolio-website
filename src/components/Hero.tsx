@@ -79,8 +79,27 @@ const Hero = () => {
             <GithubIcon className="w-7 h-7" />
         </a>
          <a href={`tel:${contact.phone}`} className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2">
-            <PhoneIcon className="w-6 h-6" />
+            <img src="/flags/georgia.png" alt="GE" className="w-6 h-6 rounded-sm object-cover" />
             <span className="text-sm">{contact.phone}</span>
+        </a>
+        {contact.phone2 && (
+          <a href={`tel:${contact.phone2}`} className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2">
+              <img src="/flags/russia.png" alt="RU" className="w-6 h-6 rounded-sm object-cover" />
+              <span className="text-sm">{contact.phone2}</span>
+          </a>
+        )}
+      </motion.div>
+      <motion.div
+        className="mt-8 flex justify-center"
+        // @ts-ignore
+        variants={itemVariants}
+      >
+        <a
+          href="/kristina-ganina.pdf"
+          download
+          className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-semibold rounded-lg transition-colors duration-300 text-sm"
+        >
+          Download CV
         </a>
       </motion.div>
     </motion.section>

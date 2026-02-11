@@ -6,7 +6,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { EXPERIENCE_DATA } from '../constants';
 import AnimatedSection from './AnimatedSection';
-import { CheckIcon } from './icons';
+import { CheckIcon, ExternalLinkIcon } from './icons';
 
 const timelineVariants = {
     hidden: { opacity: 0 },
@@ -51,7 +51,7 @@ const Experience = () => {
                 variants={itemVariants}
             >
               <div className="hidden md:block w-1/2 pr-8 text-right">
-                {index % 2 === 0 && (
+                {index === 0 && (
                     <>
                         <h3 className="text-xl font-bold text-cyan-400">{job.role}</h3>
                         <p className="text-gray-400">{job.company}</p>
@@ -61,22 +61,17 @@ const Experience = () => {
               </div>
                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full ring-8 ring-gray-900 z-10"></div>
                <div className="w-full md:w-1/2 md:pl-8">
-                    <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700/50">
-                        <div className="md:hidden mb-2">
+                    <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-lg border border-gray-700/50 overflow-hidden">
+                        {job.imageUrl && (
+                            <img src={job.imageUrl} alt={job.company} className="w-full h-24 object-cover opacity-80" />
+                        )}
+                        <div className="p-6">
+                        <div className={index === 0 ? "md:hidden mb-2" : "mb-2"}>
                            <h3 className="text-xl font-bold text-cyan-400">{job.role}</h3>
                            <p className="text-gray-400">{job.company}</p>
                            <p className="text-sm text-gray-500">{job.period}</p>
                         </div>
-                         <div className="hidden md:block">
-                            {index % 2 !== 0 && (
-                                <>
-                                    <h3 className="text-xl font-bold text-cyan-400">{job.role}</h3>
-                                    <p className="text-gray-400">{job.company}</p>
-                                    <p className="text-sm text-gray-500">{job.period}</p>
-                                </>
-                            )}
-                        </div>
-                        <ul className="mt-4 space-y-2 text-gray-400">
+                        <ul className="space-y-2 text-gray-400">
                         {job.description.map((point, i) => (
                             <li key={i} className="flex items-start">
                                 <CheckIcon className="w-4 h-4 mr-2 mt-1 text-cyan-400 flex-shrink-0" />
@@ -84,6 +79,14 @@ const Experience = () => {
                             </li>
                         ))}
                         </ul>
+                        {job.companyUrl && (
+                            <div className="mt-4 flex justify-end">
+                                <a href={job.companyUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300">
+                                    <ExternalLinkIcon className="w-6 h-6" />
+                                </a>
+                            </div>
+                        )}
+                        </div>
                     </div>
                 </div>
             </motion.div>

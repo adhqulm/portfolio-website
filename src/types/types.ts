@@ -3,6 +3,8 @@ export interface Experience {
   company: string;
   period: string;
   description: string[];
+  companyUrl?: string;
+  imageUrl?: string;
 }
 
 export interface Education {
@@ -18,12 +20,13 @@ export interface Profile {
   summary2: string;
   contact: {
     phone: string;
+    phone2?: string;
     email: string;
     location: string;
   };
   social: {
     github: string;
-    linkedin: string;
+    linkedin?: string;
   }
 }
 

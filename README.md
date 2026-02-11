@@ -81,6 +81,14 @@ src/
 
 All site content (profile info, experience, projects, skills) lives in [`src/constants.ts`](src/constants.ts). Update that file to make the portfolio your own.
 
+### Contact Form
+
+The contact form uses [Formspree](https://formspree.io) (free tier — 50 submissions/month).
+
+1. Create a free account at [formspree.io](https://formspree.io)
+2. Create a new form and copy the form ID
+3. Replace `YOUR_FORMSPREE_ID` in [`src/components/Contact.tsx`](src/components/Contact.tsx) with your ID
+
 ## License
 
 MIT
