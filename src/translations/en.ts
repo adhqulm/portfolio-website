@@ -43,7 +43,7 @@ I strive to take any project I work on to new heights, striving to create the mo
       {
         role: "Software Engineer, Full Stack Developer",
         company: "Kobuleti Geo, Kobuleti, Georgia",
-        period: "Jan 2025 - Jul 2025",
+        period: "Jan 2025 - Jun 2025",
         description: [
           "Developed and maintained web applications serving municipal operations and public-facing services.",
           "Collaborated with stakeholders to gather requirements and deliver tailored software solutions.",
