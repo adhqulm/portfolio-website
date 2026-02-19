@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { PROFILE_DATA } from '../constants';
 import { PhoneIcon, MailIcon, LocationIcon, GithubIcon} from './icons';
-import { useTranslation } from '../context/LanguageContext';
+import { useLanguage, useTranslation } from '../context/LanguageContext';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -31,7 +31,9 @@ const itemVariants = {
 
 const Hero = () => {
   const { contact, social } = PROFILE_DATA;
+  const { language } = useLanguage();
   const t = useTranslation();
+  const cvHref = language === "ru" ? "/кристина-ганина.pdf" : "/kristina-ganina.pdf";
 
   return (
     <motion.section
@@ -97,7 +99,7 @@ const Hero = () => {
         variants={itemVariants}
       >
         <a
-          href="/kristina-ganina.pdf"
+          href={cvHref}
           download
           className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-semibold rounded-lg transition-colors duration-300 text-sm"
         >
