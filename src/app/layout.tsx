@@ -14,8 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kristina Ganina",
-  description: "Full Stack Developer Portfolio",
+  title: "Kristina Ganina | Full Stack Developer",
+  description: "Full Stack Software Engineer specializing in web applications, REST APIs, and data-driven systems.",
+  openGraph: {
+    title: "Kristina Ganina | Full Stack Developer",
+    description: "Full Stack Software Engineer specializing in web applications, REST APIs, and data-driven systems.",
+    url: "https://kristinaganina.com",
+    siteName: "Kristina Ganina",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kristina Ganina | Full Stack Developer",
+    description: "Full Stack Software Engineer specializing in web applications, REST APIs, and data-driven systems.",
+  },
 };
 
 export default function RootLayout({

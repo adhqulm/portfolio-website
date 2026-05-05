@@ -1,4 +1,4 @@
-import { Profile, Experience, Education, Project } from './types/types';
+import { Profile, Experience, Education, Project, Certification } from './types/types';
 
 export const PROFILE_DATA: Profile = {
   name: "Kristina Ganina",
@@ -66,9 +66,17 @@ export const EXPERIENCE_DATA: Experience[] = [
 export const PROJECTS_DATA: Project[] = [
 
     {
+        title: "FöreUpp",
+        description: "A collaborative productivity desktop app built with React, TypeScript, and Tauri. Features a shared calendar with real-time sync across users via Firebase, color-coded event management, personal trackers, countdowns, and a Kanban board. Designed for small teams or households to stay organized together.",
+        tags: ["React", "TypeScript", "Tauri", "Firebase", "Vite", "Tailwind CSS", "Desktop App"],
+        imageUrl: "/projects/foreupp.png",
+        liveUrl: "https://github.com/adhqulm/foreupp",
+    },
+
+    {
         title: "Foodgram",
         description: "The purpose of this website is to allow users to create and store recipes on an online platform. In addition, users can download a list of ingredients needed to prepare a dish, view their friends’ recipes, and add favorite recipes to a favorites list.",
-        tags: ["Python", "Django", "Django Rest Framework", "Djoser", "Authentication & Authorization", "JavaScript", "HTML", "CSS", "PostegreSQL", "Docker"],
+        tags: ["Python", "Django", "Django Rest Framework", "Djoser", "Authentication & Authorization", "JavaScript", "HTML", "CSS", "PostgreSQL", "Docker"],
         imageUrl: "/projects/foodgram.png",
         liveUrl: "https://foodgram.bar/",
     },
@@ -81,10 +89,17 @@ export const PROJECTS_DATA: Project[] = [
     },
     {
         title: "Portfolio Website :)",
-        description: "Simple personal portfolio website built to showcase projects and skills.",
+        description: "Personal portfolio website built to showcase projects, skills, and professional experience. Features smooth animations, bilingual support, and a contact form.",
         tags: ["TypeScript", "JavaScript", "CSS", "JSON", "Markdown"],
         imageUrl: "/projects/portfolio.png",
         liveUrl: "https://kristinaganina.com/",
+    },
+    {
+        title: "BREACH",
+        description: "A narrative puzzle game played through a simulated Linux terminal. Break through layers of corporate security, manage a rising detection meter, and uncover a hidden story with multiple endings and CRT visual effects (inspired by Outer Wilds. This was created as a birthday gift and isn't for everyone.)",
+        tags: ["JavaScript", "Vite", "HTML5", "Canvas", "CSS", "Web Audio API"],
+        imageUrl: "/projects/BREACH.png",
+        liveUrl: "https://github.com/adhqulm/BREACH",
     },
     {
         title: "Graphing Calculator",
@@ -115,7 +130,7 @@ export const PROGRAMMINGLANGUAGES: string[] = [
 ];
 
 export const FRAMEWORKS: string[] = [
-  ".NET", "React", "Next.js", "ASP.NET Core", "Tailwind CSS", "Django", "Flask"
+  ".NET", "React", "Next.js", "ASP.NET Core", "Tailwind CSS", "Django", "Flask", "Electron"
 ];
 
 export const DATABASES: string[] = [
@@ -127,7 +142,7 @@ export const CLOUD: string[] = [
 ];
 
 export const API: string[] = [
-  "CSS/HTML", "REST APIs"
+  "CSS/HTML", "REST APIs", "FAST API"
 ];
 
 export const CORE_SKILLS: string[] = [
@@ -143,12 +158,6 @@ export const EDUCATION_DATA: Education[] = [
     period: "2026 - 2030",
   },
 ];
-
-export interface Certification {
-  name: string;
-  issuer: string;
-  date: string;
-}
 
 export const CERTIFICATIONS_DATA: Certification[] = [
   {

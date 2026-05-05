@@ -38,3 +38,9 @@ export interface Project {
   liveUrl?: string;
   repoUrl?: string;
 }
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+}
