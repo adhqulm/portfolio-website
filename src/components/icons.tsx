@@ -34,6 +34,17 @@ export const GithubIcon = ({ className } : IconProps) => (
 );
 
 
+export const LinkedInIcon = ({ className } : IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="2" y="2" width="20" height="20" rx="5" />
+        <line x1="8" y1="11" x2="8" y2="16" />
+        <line x1="8" y1="8" x2="8" y2="8.01" />
+        <line x1="12" y1="16" x2="12" y2="11" />
+        <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+    </svg>
+);
+
 export const CheckIcon = ({ className } : IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" className={className} width="24" height="24" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

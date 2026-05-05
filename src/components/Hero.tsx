@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { PROFILE_DATA } from '../constants';
-import { PhoneIcon, MailIcon, LocationIcon, GithubIcon} from './icons';
+import { PhoneIcon, MailIcon, LocationIcon, GithubIcon, LinkedInIcon } from './icons';
 import { useLanguage, useTranslation } from '../context/LanguageContext';
 
 const containerVariants = {
@@ -82,6 +82,11 @@ const Hero = () => {
         <a href={social.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300">
             <GithubIcon className="w-7 h-7" />
         </a>
+        {social.linkedin && (
+            <a href={social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <LinkedInIcon className="w-7 h-7" />
+            </a>
+        )}
          <a href={`tel:${contact.phone}`} className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2">
             <img src="/flags/georgia.png" alt="GE" className="w-6 h-6 rounded-sm object-cover" />
             <span className="text-sm">{contact.phone}</span>

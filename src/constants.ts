@@ -18,6 +18,7 @@ I strive to take any project I work on to new heights, striving to create the mo
   },
   social: {
       github: "https://github.com/adhqulm",
+      linkedin: "https://www.linkedin.com/in/kristinaganina",
   }
 };
 
