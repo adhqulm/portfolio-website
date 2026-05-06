@@ -8,7 +8,6 @@ const About: React.FC = () => {
     const t = useTranslation();
 
     return (
-        <>
         <AnimatedSection id="about">
             <h2 className="text-3xl font-bold text-center text-gray-100 mb-8 font-serif">
                 {t.about.heading}
@@ -23,7 +22,6 @@ const About: React.FC = () => {
                 {t.about.summary2}
             </p>
         </AnimatedSection>
-        </>
     );
 };
 

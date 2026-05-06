@@ -10,7 +10,6 @@ import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   return (
-    <>
     <div className="bg-gray-900 min-h-screen">
         <Navbar />
         <main className="container mx-auto px-6 md:px-10 lg:px-20 max-w-5xl">
@@ -24,6 +23,5 @@ export default function Home() {
         </main>
         <ScrollToTop />
     </div>
-    </>
   );
 }

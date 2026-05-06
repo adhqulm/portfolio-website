@@ -90,7 +90,6 @@ const Skills: React.FC = () => {
                     {API.map((tech) => <SkillPill key={tech} name={tech} />)}
                 </motion.div>
             </div>
-            <div className="space-y-12" />
 
             <div className='mb-12'>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-6 text-center">{t.skills.databases}</h3>
@@ -104,31 +103,32 @@ const Skills: React.FC = () => {
                     {DATABASES.map((tech) => <SkillPill key={tech} name={tech} />)}
                 </motion.div>
             </div>
-                <div className='mb-12'>
-                    <h3 className="text-xl font-semibold text-cyan-400 mb-6 text-center">{t.skills.cloudDevops}</h3>
-                    <motion.div
-                        className="flex flex-wrap justify-center gap-3"
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                    >
-                        {CLOUD.map((tech) => <SkillPill key={tech} name={tech} />)}
-                    </motion.div>
-                </div>
 
-                <div>
-                    <h3 className="text-xl font-semibold text-cyan-400 mb-6 text-center">{t.skills.languages}</h3>
-                    <motion.div
-                        className="flex flex-wrap justify-center gap-3"
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                    >
-                        {t.skills.languagesList.map((lang) => <SkillPill key={lang} name={lang} />)}
-                    </motion.div>
-                </div>
+            <div className='mb-12'>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-6 text-center">{t.skills.cloudDevops}</h3>
+                <motion.div
+                    className="flex flex-wrap justify-center gap-3"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
+                    {CLOUD.map((tech) => <SkillPill key={tech} name={tech} />)}
+                </motion.div>
+            </div>
+
+            <div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-6 text-center">{t.skills.languages}</h3>
+                <motion.div
+                    className="flex flex-wrap justify-center gap-3"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
+                    {t.skills.languagesList.map((lang) => <SkillPill key={lang} name={lang} />)}
+                </motion.div>
+            </div>
         </AnimatedSection>
     );
 };

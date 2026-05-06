@@ -11,6 +11,9 @@ export const ru = {
   },
   hero: {
     downloadCv: "Скачать резюме",
+    statsYears: "Лет опыта",
+    statsProjects: "Проектов",
+    statsCompanies: "Компании",
   },
   about: {
     heading: "Резюме",
@@ -24,6 +27,7 @@ export const ru = {
   },
   profile: {
     title: "Full Stack Разработчик",
+    titles: ["Full Stack Разработчик", "Дата-инженер", "Инженер-программист"],
     location: "Тбилиси, Грузия",
   },
   experience: {

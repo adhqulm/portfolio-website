@@ -11,6 +11,9 @@ export const en = {
   },
   hero: {
     downloadCv: "Download CV",
+    statsYears: "Years Experience",
+    statsProjects: "Projects",
+    statsCompanies: "Companies",
   },
   about: {
     heading: "Summary",
@@ -24,6 +27,7 @@ I strive to take any project I work on to new heights, striving to create the mo
   },
   profile: {
     title: "Full Stack Developer",
+    titles: ["Full Stack Developer", "Data Engineer", "Software Engineer"],
     location: "Tbilisi, Georgia",
   },
   experience: {
