@@ -28,7 +28,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, className =
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.05 }}
       className={`py-16 md:py-24 ${className}`}
     >
       {children}

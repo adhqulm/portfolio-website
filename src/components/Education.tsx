@@ -36,7 +36,7 @@ const Education = () => {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.05 }}
             >
                 {eduData.map((edu, index) => (
                     <motion.div

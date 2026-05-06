@@ -46,7 +46,7 @@ const Skills: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.05 }}
                 >
                     {t.skills.coreSkillsList.map((skill) => <SkillPill key={skill} name={skill} />)}
                 </motion.div>
@@ -59,7 +59,7 @@ const Skills: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.05 }}
                 >
                     {PROGRAMMINGLANGUAGES.map((tech) => <SkillPill key={tech} name={tech} />)}
                 </motion.div>
@@ -72,7 +72,7 @@ const Skills: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.05 }}
                 >
                     {FRAMEWORKS.map((tech) => <SkillPill key={tech} name={tech} />)}
                 </motion.div>
@@ -85,7 +85,7 @@ const Skills: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.05 }}
                 >
                     {API.map((tech) => <SkillPill key={tech} name={tech} />)}
                 </motion.div>
@@ -98,7 +98,7 @@ const Skills: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.05 }}
                 >
                     {DATABASES.map((tech) => <SkillPill key={tech} name={tech} />)}
                 </motion.div>
@@ -111,7 +111,7 @@ const Skills: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.05 }}
                 >
                     {CLOUD.map((tech) => <SkillPill key={tech} name={tech} />)}
                 </motion.div>
@@ -124,7 +124,7 @@ const Skills: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.05 }}
                 >
                     {t.skills.languagesList.map((lang) => <SkillPill key={lang} name={lang} />)}
                 </motion.div>
