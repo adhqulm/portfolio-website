@@ -12,7 +12,6 @@ A great piece of software is never finished, it is only improved upon continuall
 I strive to take any project I work on to new heights, striving to create the most useful and well executed solutions I can.`,
   contact: {
     phone: "+995 555 540 926",
-    phone2: "+7 993 324 15 55",
     email: "adhqulm@gmail.com",
     location: "Tbilisi, Georgia",
   },
@@ -150,7 +149,7 @@ export const CORE_SKILLS: string[] = [
   "Agile Methodologies", "Excellent collaboration skills", "Database design & Query optimization", "Test Driven Development"
 ];
 
-export const LANGUAGES: string[] = ["English: Native", "Russian: Native"];
+export const LANGUAGES: string[] = ["English: Native", "Russian: Fluent"];
 
 export const EDUCATION_DATA: Education[] = [
   {

@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { PROGRAMMINGLANGUAGES, FRAMEWORKS, DATABASES, CLOUD, API } from '../constants';
 import AnimatedSection from './AnimatedSection';
-import { useTranslation } from '../context/LanguageContext';
+import { useTranslation, useLanguage } from '../context/LanguageContext';
 
 const containerVariants = {
     hidden: { opacity: 1 },
@@ -32,6 +32,7 @@ const SkillPill: React.FC<{ name: string }> = ({ name }) => (
 
 const Skills: React.FC = () => {
     const t = useTranslation();
+    const { language } = useLanguage();
 
     return (
         <AnimatedSection id="skills">
@@ -120,6 +121,7 @@ const Skills: React.FC = () => {
             <div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-6 text-center">{t.skills.languages}</h3>
                 <motion.div
+                    key={language}
                     className="flex flex-wrap justify-center gap-3"
                     variants={containerVariants}
                     initial="hidden"

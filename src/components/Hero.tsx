@@ -161,7 +161,6 @@ const Hero = () => {
             </a>
         )}
          <a href={`tel:${contact.phone}`} className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2">
-            <img src="/flags/georgia.png" alt="GE" className="w-6 h-6 rounded-sm object-cover" />
             <span className="text-sm">{contact.phone}</span>
         </a>
         {contact.phone2 && (

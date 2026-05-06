@@ -18,14 +18,12 @@ const LanguageContext = createContext<LanguageContextType>({
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
   const [language, setLanguage] = useState<Language>("en");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("language") as Language | null;
     if (saved === "en" || saved === "ru") {
       setLanguage(saved);
     }
-    setMounted(true);
   }, []);
 
   const toggleLanguage = () => {
@@ -33,8 +31,6 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     setLanguage(next);
     localStorage.setItem("language", next);
   };
-
-  if (!mounted) return <>{children}</>;
 
   return (
     <LanguageContext.Provider value={{ language, toggleLanguage }}>

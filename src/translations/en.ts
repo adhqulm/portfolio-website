@@ -105,7 +105,7 @@ I strive to take any project I work on to new heights, striving to create the mo
     cloudDevops: "Cloud & DevOps",
     languages: "Languages",
     coreSkillsList: ["Agile Methodologies", "Excellent collaboration skills", "Database design & Query optimization", "Test Driven Development"],
-    languagesList: ["English: Native", "Russian: Native"],
+    languagesList: ["English: Native", "Russian: Fluent"],
   },
   contact: {
     heading: "Get In Touch",
